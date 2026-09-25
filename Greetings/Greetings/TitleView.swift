@@ -8,19 +8,35 @@
 import SwiftUI
 
 struct TitleView: View {
+    let diameter = 70.0
+    let lineWidth = 15.0
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 10){
-            Text("Greetings")
-                .font(.largeTitle)
-                .fontWeight(.semibold)
+        HStack{
+            VStack(alignment: .leading, spacing: 0){
+                Text("Greetings")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                
+                Text("Exploring SwiftUI")
+                    .font(.headline)
+                    .fontWeight(.thin)
+            }
             
-            Text("Exploring SwiftUI")
-                .font(.headline)
-                .fontWeight(.thin)
+            Spacer()
+            
+            Circle()
+                .frame(width: diameter, height: diameter, alignment: .center)
+                
         }
+        .padding()
     }
 }
 
 #Preview {
-    TitleView()
+    VStack{
+        TitleView()
+        
+        Spacer()
+    }
 }

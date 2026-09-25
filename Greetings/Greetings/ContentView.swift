@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack{
-            Color.brown.opacity(0.3)
-                .ignoresSafeArea()
+            BackgroundView()
             
             VStack(alignment: .leading) {
                 TitleView()
